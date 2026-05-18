@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= 'Update Custom Object Form | Integrating With HubSpot I Practicum'
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Add a New Record
+
+    a(href='/') Return to the homepage
+
+    form(action='/update-cobj' method='POST')
+
+      label(for='name') Name
+      input(
+        type='text'
+        id='name'
+        name='name'
+        placeholder='Enter name'
+        required
+      )
+
+      label(for='bio') Bio
+      textarea(
+        id='bio'
+        name='bio'
+        placeholder='Enter a short bio'
+        rows='4'
+        required
+      )
+
+      label(for='type') Type
+      input(
+        type='text'
+        id='type'
+        name='type'
+        placeholder='Enter a type'
+        required
+      )
+
+      button(type='submit') Create Record
